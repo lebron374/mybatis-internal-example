@@ -10,6 +10,7 @@ import java.io.Reader;
 import javax.annotation.Resource;
 
 import cn.edu.example.entity.ImcUser;
+import cn.edu.example.mapper.UserMapper;
 
 /**
  * @author virgil.Wang
@@ -27,8 +28,11 @@ public class MybatisHelloWorld {
 
             SqlSession sqlSession = sqlSessionFactory.openSession();
             try {
-                ImcUser imcUser = (ImcUser)sqlSession.selectOne("cn.edu.example.mapper.UserMapper.getById", 1);
-                System.out.println(imcUser.getUserNick());
+                UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+                // ImcUser imcUser = userMapper.getById(1);
+                // System.out.println(imcUser.getUserNick());
+                int rowEffects = userMapper.updateSexById("1", 1);
+                System.out.println(rowEffects);
             } finally {
                 sqlSession.close();
             }

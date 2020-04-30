@@ -15,6 +15,14 @@ public interface UserMapper {
      * @param userId 用户编号
      * @return
      */
-    ImcUser getById(@Param("userId") Integer userId);
+    ImcUser getById(@Param("userId") int userId);
+
+    /**
+     * 跟新用户信息
+     * @param sex
+     * @param userId
+     * @return
+     */
+    int updateSexById(@Param("sex") String sex, @Param("userId") int userId);
 
 }

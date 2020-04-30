@@ -5,4 +5,8 @@
     <select id="getById" parameterType="int" resultType="cn.edu.example.entity.ImcUser">
         SELECT user_nick AS userNick FROM imc_user WHERE user_id = #{userId};
     </select>
+
+    <update id="updateSexById" parameterType="map">
+        UPDATE imc_user SET sex = #{sex} WHERE user_id = #{userId};
+    </update>
 </mapper>
