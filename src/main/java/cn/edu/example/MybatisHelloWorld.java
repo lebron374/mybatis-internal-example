@@ -29,10 +29,12 @@ public class MybatisHelloWorld {
             SqlSession sqlSession = sqlSessionFactory.openSession();
             try {
                 UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-                // ImcUser imcUser = userMapper.getById(1);
-                // System.out.println(imcUser.getUserNick());
-                int rowEffects = userMapper.updateSexById("1", 1);
-                System.out.println(rowEffects);
+                ImcUser imcUser = userMapper.getById(1);
+                System.out.println(imcUser.getUserNick());
+                // 如果调用的方法是Object的方法，则直接调用invoke方法
+                // userMapper.toString();
+                // int rowEffects = userMapper.updateSexById("1", 1);
+                // System.out.println(rowEffects);
             } finally {
                 sqlSession.close();
             }
