@@ -1,14 +1,19 @@
 package cn.edu.example.entity;
 
+import java.lang.reflect.Constructor;
 import java.util.Date;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author virgil.Wang
  * @date 2020/4/28 14:09
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class ImcUser {
 
     private Integer userId;
