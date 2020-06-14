@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class GenericReflectionTest {
 
     public static void main(String[] args) {
-        String name;
+        /*String name;
         if (args.length > 0) {
             name = args[0];
         } else {
@@ -27,7 +27,7 @@ public class GenericReflectionTest {
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     public static void printClass(Class<?> cl) {
